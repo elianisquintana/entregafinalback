@@ -1,12 +1,15 @@
 package com.example.RegistroEIngreso.modelos;
 
-import jdk.jfr.events.CertificateId;
-import sun.util.resources.LocaleData;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
 import java.time.LocalDate;
 @Entity
 public class Usuario {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String nomdre;
     private String contraseña;
